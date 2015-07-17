@@ -1,0 +1,6 @@
+#!/bin/bash
+
+for file in $@
+do
+    ! [ -d "${file}" ] && python -c "import sys; sys.exit(open(\"$file\").read().endswith('\n'))" && echo "" >> "${file}"
+done
