@@ -1,0 +1,5 @@
+#!/bin/bash
+
+diff -i -b --side-by-side --suppress-common-lines $1 $2
+echo "" #adds newline after output
+
